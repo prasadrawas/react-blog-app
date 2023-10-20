@@ -50,6 +50,11 @@ function Header() {
         <section className="hidden md:block">
           <ul className="flex space-x-5 items-center justify-center list-none font-medium">
             <li>
+              <Link to={routes.home}>
+                <PrimaryButton title={"Home"} />
+              </Link>
+            </li>{" "}
+            <li>
               <Link to={routes.createBlog}>
                 <PrimaryButton title={"Write a Blog"} />
               </Link>
@@ -97,7 +102,14 @@ function Header() {
       </header>
 
       {showMenu && (
-        <section className="md:hidden p-3 shadow-md bg-white rounded-br-lg rounded-bl-lg">
+        <section
+          className="md:hidden p-3 shadow-md bg-white rounded-br-lg rounded-bl-lg"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="300"
+          data-aos-easing="ease-in"
+        >
           <ul className="flex flex-col space-x-5 items-center list-none space-y-3">
             <li>
               <Link to={routes.home}>
@@ -110,7 +122,7 @@ function Header() {
             </li>
 
             <li>
-              <Link to={routes.blogEditor}>
+              <Link to={routes.createBlog}>
                 <PrimaryButton
                   title={"Write a Blog"}
                   className={"w-[200px]"}
